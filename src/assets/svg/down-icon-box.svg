@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="132.229" height="132.229" viewBox="0 0 132.229 132.229">
+  <defs>
+    <clipPath id="clip-path">
+      <rect width="132.229" height="132.229" fill="none"/>
+    </clipPath>
+    <linearGradient id="linear-gradient" x1="0.072" y1="0.066" x2="0.997" y2="1.003" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#4e4e4e"/>
+      <stop offset="0.364" stop-color="#485364"/>
+      <stop offset="1" stop-color="#3362ad"/>
+    </linearGradient>
+    <filter id="Rectangle_5" x="3.728" y="3.728" width="124.773" height="124.773" filterUnits="userSpaceOnUse">
+      <feOffset dx="3" dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Component_1_1" data-name="Component 1 – 1" transform="translate(0 0)" clip-path="url(#clip-path)">
+    <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Rectangle_5)">
+      <rect id="Rectangle_5-2" data-name="Rectangle 5" width="76" height="75" rx="7" transform="translate(62.76 9.73) rotate(45)" fill="url(#linear-gradient)"/>
+    </g>
+    <g id="next" transform="translate(84.843 40.698) rotate(90)">
+      <path id="Path_1" data-name="Path 1" d="M44.576,17.2H.694a.694.694,0,1,1,0-1.387H44.576a.694.694,0,1,1,0,1.387Z" transform="translate(0 4.852)" fill="#fff"/>
+      <path id="Path_2" data-name="Path 2" d="M19.792,39.446a.693.693,0,0,1-.491-1.183l16.9-16.9L19.3,4.466a.693.693,0,0,1,.981-.981L37.672,20.871a.7.7,0,0,1,0,.982L20.281,39.242A.687.687,0,0,1,19.792,39.446Z" transform="translate(7.393 0)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

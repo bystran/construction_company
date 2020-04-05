@@ -5,7 +5,12 @@
     <div class="main-container">
         <div class="row-wrp">
             <div class=row>
-                <icon :icon="icon" class='icon perk-icon'></icon>
+                <span class='icon'>
+                    <div>
+                        <component :is=icon></component>
+                    </div>
+                </span>
+
                 <h3>{{heading}}</h3>
             </div>
         </div>
@@ -71,17 +76,18 @@
 </style>
 
 <script>
-    import Icon from 'laravel-mix-vue-svgicon/IconComponent.vue';
+    //  import Icon from 'laravel-mix-vue-svgicon/IconComponent.vue';
     export default {
         
 
         
-        components:{Icon},
+        // components:{Icon},
         props:{ 
             heading:String,
             text:String,
             icon:String,
-        }
+        },
+
 
         
     }

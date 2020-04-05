@@ -12,7 +12,15 @@
                     <h2 class='underlined '>O nás</h2>
                 </div>
                 <p class=''>
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolor
+                    Žijeme a dýchame stavebníctvo. Našim cieľom je vám pomôcť premeniť vašu vysnívanú stavbu v realitu. Už desať rokov spolupracujeme s talentovanými architektami, remeselníkmi na rôznych projektoch. Od sťaby kancelárskych priestorov, športových hál až po exkluzívne rezidenčne stavby. 
+                </p>
+                <br />
+                <p>
+                    V SR WORLD vieme že každá stavba a každý zákazník si vyžaduje individuálny prístup a preto staviame s dušou. 
+                </p>
+                <br />
+                <p>
+                    Pochádzame z Bratislavy ale pôsobíme na celom Slovensku.
                 </p>
             </div>
         </div>

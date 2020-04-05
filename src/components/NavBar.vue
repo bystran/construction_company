@@ -26,7 +26,7 @@
 
 <script>
 
-import Logo from '../assets/svg/logo.svg'
+import Logo from '../assets/svg/logo.svg?ico'
 import {TastyBurgerButton} from 'vue-tasty-burgers'
 import 'vue-tasty-burgers/dist/vue-tasty-burgers.css'
 
@@ -87,53 +87,10 @@ export default {
 </script>
 
 <style lang="scss" >
+    @import '../mixins';    
     $nav_height_mobile : 55px;
     $nav_height_lg : 65px;
-    $grey: #4E4E4E;
-
-    // Small tablets and large smartphones (landscape view)
-    $screen-sm-min: 576px;
-
-    // Small tablets (portrait view)
-    $screen-md-min: 768px;
-
-    // Tablets and small desktops
-    $screen-lg-min: 992px;
-
-    // Large tablets and desktops
-    $screen-xl-min: 1200px;
-
-    @mixin sm {
-        @media (min-width: #{$screen-sm-min}) {
-            @content;
-        }
-    }
-
-    // Medium devices
-    @mixin md {
-        @media (min-width: #{$screen-md-min}) {
-            @content;
-        }
-    }
-
-    // Large devices
-    @mixin lg {
-        @media (min-width: #{$screen-lg-min}) {
-            @content;
-        }
-    }
-
-    // Extra large devices
-    @mixin xl {
-        @media (min-width: #{$screen-xl-min}) {
-            @content;
-        }
-    }
-    @mixin rwd($screen) {
-        @media (min-width: $screen+'px') {
-            @content;
-        }
-    }
+    $grey: #4E4E4E;  
     .navbar-toggler{
         background:none !important;
     }
@@ -156,10 +113,10 @@ export default {
                 height: $nav_height_mobile;
                 width:200px;
                 g path{
-                    fill:white !important;
+                    fill:#081F62 !important;
                 }
-                g{
-                    fill:#081F62;
+                path{
+                    fill:transparent;
                 }
                 text{
                     font-family: ansonregular;
@@ -229,7 +186,7 @@ export default {
             }
             @include lg{
                 height:100px;
-                width:270px;
+                width:250px;
             }
  
             
@@ -244,6 +201,7 @@ export default {
     .nav-item{
         padding: 10px;
         font-size:1.3em;
+
         .btn.btn-primary{
             margin-top:-8px;
         }
@@ -285,10 +243,11 @@ export default {
                 height:50px;
             }
             li{
-                font-size:1.1em;
+                font-size:.95em;
                 float:left;
                 .btn-primary{
                     margin-top:-7px;
+                    padding: 8px 15px;
                 }
             }
             

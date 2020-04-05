@@ -1,9 +1,110 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web');
 
+// Variables
+@import 'variables';
+@import 'mixins';
 @font-face {
     font-family: 'ansonregular';
     src: url('./assets/fonts/anson-regular-webfont.ttf');
 }
 
-html, body {
-    margin:0px;
+html,body{
+    
+    width:100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;  
+}
+.x-centered{
+    display: flex;
+    justify-content: center;
+}
+
+body{
+    background: url("./assets/images/line_bg.svg");
+    background-repeat: repeat-y;
+}
+
+
+a{
+    text-decoration: none;
+}
+.btn.btn-primary{
+    background: rgb(78,78,78);
+    background: $light_blue !important;
+    color:white !important;
+}
+.btn{
+    border-radius: 7px;
+    font-size:0.9em;
+    padding:10px 20px;
+}
+h1,h2,h3,h4,h5, body{
+    font-family: "Titillium Web";
+    transition: font-size .5s;
+}
+h1.section-number{
+    font-size:3.5em;
+    font-weight:bold;
+    margin-bottom:0px;
+    @include md{
+        font-size:7.5em;
+        line-height: 1;
+    }
+    @include lg{
+        font-size: 147px;
+
+
+    }
+}
+.dark-blue-c{
+    color:$darker_blue;
+}
+.light-blue-c{
+    color:$light_blue;
+}
+h2.underlined {
+
+    font-family: "Titillium Web";
+    font-weight: normal;
+    text-align: center;
+
+    color:$darker_blue;
+    font-size: 2em;
+    display: inline-block;
+    padding-bottom: 5px;
+    position: relative;
+    &:before{
+        content: "";
+        position: absolute;
+        width: 50%;
+        height: 1px;
+        bottom: 0;
+        left: 25%;
+        border-bottom: 3px solid $light_blue;
+    }
+    @include md{
+        font-size:2.5em;
+    }
+    @include lg{
+
+        font-size: 71px;
+
+    }
+    @include xl{
+        font-size: 71px;
+    }
+}
+h2.underlined.yellow {
+    &:before{
+        content: "";
+        position: absolute;
+        width: 50%;
+        height: 1px;
+        bottom: 0;
+        left: 25%;
+        border-bottom: 3px solid #FFB70E;
+    }
 }

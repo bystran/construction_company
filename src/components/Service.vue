@@ -22,7 +22,7 @@
             padding-bottom:10px;
         }
         .main-container{
-
+            height:100%;
             padding: 30px 40px;
             background: #fff;
             box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.11);
@@ -61,12 +61,8 @@
 </style>
 
 <script>
-    import Icon from 'laravel-mix-vue-svgicon/IconComponent.vue';
-    export default {
-        
 
-        
-        components:{Icon},
+    export default {
         props:{ 
             heading:String,
             text:String,

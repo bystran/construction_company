@@ -1,6 +1,10 @@
 <template>
     <div class='services-section'>
-        <icon icon="planet-wm" class="w-full fill-current stroke-current" id='planet-wm'></icon>
+        <span id="planet-wm" class="w-full fill-current stroke-current">
+            <div>
+                 <PlanetWM class="w-full fill-current stroke-current" />
+            </div>
+        </span>
         <h1 class="section-number dark-blue-c">
             01
         </h1>
@@ -23,49 +27,7 @@
 </template>
 
 <style lang='scss'>
- // Small tablets and large smartphones (landscape view)
-    $screen-sm-min: 576px;
-
-    // Small tablets (portrait view)
-    $screen-md-min: 768px;
-
-    // Tablets and small desktops
-    $screen-lg-min: 992px;
-
-    // Large tablets and desktops
-    $screen-xl-min: 1200px;
-
-    @mixin sm {
-        @media (min-width: #{$screen-sm-min}) {
-            @content;
-        }
-    }
-
-    // Medium devices
-    @mixin md {
-        @media (min-width: #{$screen-md-min}) {
-            @content;
-        }
-    }
-
-    // Large devices
-    @mixin lg {
-        @media (min-width: #{$screen-lg-min}) {
-            @content;
-        }
-    }
-
-    // Extra large devices
-    @mixin xl {
-        @media (min-width: #{$screen-xl-min}) {
-            @content;
-        }
-    }
-    @mixin rwd($screen) {
-        @media (min-width: $screen+'px') {
-            @content;
-        }
-    }
+ @import '../mixins';
     #planet-wm{
         position:absolute;
         top:-80px;
@@ -75,19 +37,17 @@
         height:335px;
     
         @include lg{
-            width:670px;
-            height:670px;
+
             top:-80px;
             left:-300px;
+            width:670px;
+            height:670px;
         }
-        svg{
-            width:100%;
-            height:100%;
-        }
+
     }
     .services-section{
         position: relative;
-        background:url('/images/line_home.svg') no-repeat 160% -20%;
+        background:url("../assets/images/line_home.svg?external")no-repeat 160% -20%;
         
         padding-top:10%;
         padding-bottom:10%;
@@ -112,11 +72,15 @@
         flex-grow: 0;
         flex-shrink: 0;
         @include md{
-            flex-basis: 445px;
+            flex-basis: 350px;
             padding:25px 12px;
+            .banner{
+                height: 190px;
+                font-size:14px;
+            }
         }
         @include lg{
-            margin-top:70px;
+            margin-top:20px;
         }
     }
     .services-container{
@@ -127,28 +91,31 @@
         }
     }
 </style>
+
+
     
 
 <script>
-    import Icon from 'laravel-mix-vue-svgicon/IconComponent.vue';
+    import PlanetWM from  '../assets/svg/planet-wm.svg?ico';
     import Service from "../components/Service"; 
     export default {
-        components:{Service, Icon},
+        components:{Service, PlanetWM},
         data(){
             return{
                 services:[
+
                     {icon:'diamond',
-                     heading:'Hello',
-                     text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. '
-                     },
-                    {icon:'diamond',
-                     heading:'Hello',
-                     text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. '
+                     heading:'Poradenstvo',
+                     text:'Radi sa s Vami podelíme o naše know-how v oblasti stavebníctva. Čo sa týka stavby, poradíme vám s každým problémom.'
                      },
                      {icon:'diamond',
-                     heading:'Hello',
-                     text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. '
-                     }
+                     heading:'Projektovanie',
+                     text:'Pomôžeme vám premeniť vašu ideu v realitu. Spolu s našim dizajnérmi a overenými architektmi vám vypracujeme riešenie na mieru.'
+                     },
+                     {icon:'diamond',
+                      heading:'Sprostredkovanie',
+                      text:"Zaručíme rýchle a efektívne sprostredkovanie stavby. Postaráme sa o všetko;- Od vašej počiatočnej požiadavky, cez prvú položenu tehlu až po odovzdanie kľúču. Všetko transparentne a bez starosti."
+                    },
                 ]
             }
         }

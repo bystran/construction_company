@@ -116,29 +116,34 @@
 
 <script>
     import Service from "../components/Perks"; 
+    import Diamond from "../assets/svg/diamond.svg?ico"
     export default {
         components:{Service},
         data(){
             return{
                 services:[
-                    {icon:'diamond',
-                     heading:'Hello',
+                    {icon:Diamond,
+                     heading:'Stavba na kluc',
                      text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. '
                      },
-                    {icon:'diamond',
-                     heading:'Hello',
+                    {icon:Diamond,
+                     heading:'Flexibilita',
                      text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. '
                      },
-                     {icon:'diamond',
-                     heading:'Hello',
+                     {icon:Diamond,
+                     heading:'Priatelsky pristup',
                      text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. '
                      },
-                     {icon:'diamond',
-                     heading:'Hello',
+                     {icon:Diamond,
+                     heading:'Dôraz na kvalitu',
                      text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. '
                      },
-                     {icon:'diamond',
-                     heading:'Hello',
+                     {icon:Diamond,
+                     heading:'Skúsenosti',
+                     text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. '
+                     },
+                    {icon:Diamond,
+                     heading:'Transparencia',
                      text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. '
                      },
                 ]

@@ -98,7 +98,7 @@ $screen-xl-min: 1200px;
 
     h1{
         font-family: "Titillium Web";
-        font-weight: 600;
+        font-weight: lighter;
         font-size:25px;
         // font-size: 79px;
         text-align: center;
@@ -110,6 +110,8 @@ $screen-xl-min: 1200px;
     h2{
         font-size:18px;
         text-align: right;
+        font-weight: normal;
+        
     }
     h3{
         font-size:1.2em;
@@ -125,10 +127,14 @@ $screen-xl-min: 1200px;
     }
     @include lg{
         h1{
-            font-size:79px;
+            font-size:72px;
         }
         h2{
-            font-size:22px;
+            font-size:32px;
+            height: 10px;
+            margin-top:5px;
+            font-weight: normal;
+
         }
     }
 

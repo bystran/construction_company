@@ -85,7 +85,7 @@
         props:{ 
             heading:String,
             text:String,
-            icon:String,
+            icon:Object,
         },
 
 

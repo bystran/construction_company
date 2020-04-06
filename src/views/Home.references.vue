@@ -10,9 +10,9 @@
          
             <div v-for="(reference, index) in references" v-bind:key="index" class='reference-wrp'>
             
-                <div class="reference-img"  v-bind:style="{ backgroundImage: 'url(' + reference.img + ')' }">
+                <!-- <div class="reference-img"  v-bind:style="{ backgroundImage: require(reference.img)}">
                     <div class="img-label"> <p>{{reference.heading}}</p></div>
-                </div>
+                </div> -->
  
             </div>
             
@@ -121,17 +121,18 @@
         data(){
             return{
                 references:[
-                    {img:"/images/reference.jpg", heading:"Bla bla"},
-                    {img:"/images/reference.jpg", heading:"Bla bla"},
-                    {img:"/images/reference.jpg", heading:"Bla bla"},
-                    {img:"/images/reference.jpg", heading:"Bla bla"},
-                    {img:"/images/reference.jpg", heading:"Bla bla"},
-                    {img:"/images/reference.jpg", heading:"Bla bla"},
-                    {img:"/images/reference.jpg", heading:"Bla bla"},
-                    {img:"/images/reference.jpg", heading:"Bla bla"}
+                    {img:"../assets/images/artisan.jpg", heading:"Bla bla"},
+                    // {img:"assets/images/reference.jpg", heading:"Bla bla"},
+                    // {img:"assets/images/reference.jpg", heading:"Bla bla"},
+                    // {img:"assets/images/reference.jpg", heading:"Bla bla"},
+                    // {img:"assets/images/reference.jpg", heading:"Bla bla"},
+                    // {img:"assets/images/reference.jpg", heading:"Bla bla"},
+                    // {img:"assets/images/reference.jpg", heading:"Bla bla"},
+                    // {img:"assets/images/reference.jpg", heading:"Bla bla"}
                 ]
             }
-        }
+        },
+
     }
 
 </script>

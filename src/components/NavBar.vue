@@ -57,7 +57,6 @@ export default {
                 
                 
             }
-            console.log(this.isUp);
             this.prevScrollpos = currentScrollPos;  
          },
          stickNavOnInitialDown(){
@@ -78,7 +77,6 @@ export default {
         this.isUp = false; 
         this.stickNavOnInitialDown();
         this.prevScrollpos = window.pageYOffset;
-        console.log(this.isToggled); 
         window.onscroll = this.scrollFunctions; 
 
      },

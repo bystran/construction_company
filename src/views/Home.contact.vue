@@ -18,11 +18,11 @@
                 <div class="x-centered">
                     <ul class='contact-info'>
                         <li>
-                            <icon icon="telephone"></icon>
+                            <!-- <icon icon="telephone"></icon> -->
                             0903 267 726
                         </li>
                         <li>
-                            <icon icon="envelope"></icon>
+                            <!-- <icon icon="envelope"></icon> -->
                             info@srworld.sk
                         </li>
                     </ul>
@@ -46,7 +46,7 @@
                             SK2022440101
                         </li>
                         <li>
-                            <icon icon="placeholder" class="w-full fill-current stroke-current"></icon>
+                            <!-- <icon icon="placeholder" class="w-full fill-current stroke-current"></icon> -->
                             Jašíkova 3151/15
                         </li>
                         <li>
@@ -170,10 +170,10 @@
 
 <script>       
 
-    import Icon from 'laravel-mix-vue-svgicon/IconComponent.vue';
+    //import Icon from 'laravel-mix-vue-svgicon/IconComponent.vue';
     import ContactForm from "../components/ContactForm"
     export default {
-        components:{ContactForm,Icon},
+        components:{ContactForm},
 
     }
 

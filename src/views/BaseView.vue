@@ -22,12 +22,7 @@
                 name : null
             }
         },
-        mounted(){
-            console.log('mounted');
-            
-            // this.isLoggedIn = localStorage.getItem('jwt')
-            // this.name = localStorage.getItem('user')
-        }
+
     }
 
 

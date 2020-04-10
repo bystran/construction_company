@@ -124,27 +124,27 @@
                 services:[
                     {icon:Diamond,
                      heading:'Stavba na kluc',
-                     text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. '
+                     text:'Postráme sa o všetky starosti, birokraciu, návrh, stavbu a riešenie problemov, aby ste vy nemuseli.'
                      },
                     {icon:Diamond,
                      heading:'Flexibilita',
-                     text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. '
+                     text: 'Máte špecialne požiadavky? Nastavili sme naše procesi tak aby sme vyhoveli vašim novím požiadavkam.'
                      },
                      {icon:Diamond,
                      heading:'Priatelsky pristup',
-                     text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. '
+                     text:'S úsmevom na tvári v každej situácii.'
                      },
                      {icon:Diamond,
                      heading:'Dôraz na kvalitu',
-                     text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. '
+                     text:'Kvalita je u nás na prvom mieste. V každej fáze projektu dohliadame na to že všetko podlieha naším prísnim štandardom.'
                      },
                      {icon:Diamond,
                      heading:'Skúsenosti',
-                     text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. '
+                     text: 'Máme vyše 10 rokov a 50+ úspešne dokončených projektov.'
                      },
                     {icon:Diamond,
                      heading:'Transparencia',
-                     text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. '
+                     text:'Všetko bez starostí? To neznamená, že neviete ako je na tom vaša stavaba. Je pre nás dôležité aby ste mali úplný prehľad o vašej stavbe a preto poskytujeme naším zákazníkom časté update-y.'
                      },
                 ]
             }

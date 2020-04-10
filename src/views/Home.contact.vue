@@ -18,11 +18,19 @@
                 <div class="x-centered">
                     <ul class='contact-info'>
                         <li>
-                            <!-- <icon icon="telephone"></icon> -->
+                            <span>
+                                <div>
+                                    <Telephone />
+                                </div>
+                            </span>
                             0903 267 726
                         </li>
                         <li>
-                            <!-- <icon icon="envelope"></icon> -->
+                            <span>
+                                <div>
+                                    <Envelope />
+                                </div>
+                            </span>
                             info@srworld.sk
                         </li>
                     </ul>
@@ -46,7 +54,11 @@
                             SK2022440101
                         </li>
                         <li>
-                            <!-- <icon icon="placeholder" class="w-full fill-current stroke-current"></icon> -->
+                            <span class="w-full fill-current stroke-current" >
+                                <div>
+                                    <Placeholder/>
+                                </div>
+                            </span>
                             Jašíkova 3151/15
                         </li>
                         <li>
@@ -147,7 +159,7 @@
             color:#535F80;
             font-size:1.2em;
             svg{
-                height:20px;
+                transform: scale(.7) translateY(10px);
                 padding-right: 3px;
                 path{
                     fill:#535F80;
@@ -170,10 +182,12 @@
 
 <script>       
 
-    //import Icon from 'laravel-mix-vue-svgicon/IconComponent.vue';
+    import Placeholder from '../assets/svg/placeholder.svg?ico'
+    import Envelope from '../assets/svg/envelope.svg?ico'
+    import Telephone from '../assets/svg/telephone.svg?ico'
     import ContactForm from "../components/ContactForm"
     export default {
-        components:{ContactForm},
+        components:{ContactForm, Placeholder, Envelope, Telephone},
 
     }
 

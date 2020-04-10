@@ -21,24 +21,45 @@
         <div class="x-centered">
             <ul class='footer-contact-ul'>
                 <li>
-                    <icon icon="telephone" class=""></icon>
+                    <span>
+                        <div>
+                             <Telephone />
+                        </div>
+                    </span>
                     0903 267 726
                 </li>
                 <li>
-                    <icon icon="envelope" class=""></icon>
+                    <span>
+                        <div>
+                            <Envelope />
+                        </div>
+                    </span>
                     info@srworld.sk
                 </li>
             </ul>
         </div>
         <ul class="icons">
             <li class="">
-                <icon icon="facebook" class=""></icon>
+                <span>
+                    <div>
+                        <Fb />
+                    </div>
+                </span>
             </li>
             <li class="">
-                <icon icon="instagram" class=""></icon>
+                <span>
+                    <div>
+                        <LinkedIn />     
+                    </div>
+                </span>
+       
             </li>
             <li class="">
-                <icon icon="linkedin" class=""></icon>
+                <span>
+                    <div>
+                        <Instagram />
+                    </div>
+                </span>
             </li>
         </ul>
     </footer>
@@ -127,13 +148,14 @@
         .footer-contact-ul{
             li{
                 font-size:1.2em;
+
                 svg{
-                height:20px;
-                padding-right: 3px;
-               
+                    padding-right: 7px;
+                    transform: scale(.7) translateY(12px);
                     path{
                         fill:white;
                     }
+
                 }
                 div{
                     display: inline;
@@ -165,9 +187,15 @@
                 width:35px;
                 padding:10px;
             }
+            span{
+                div{
+                    height: 35px;
+                    width: 35px;
+                    position: relative;
+                }
+            }
             svg{
-                height:35px;
-                padding-right: 3px;
+                transform: scale(.8);
                
                     path{
                         fill:white;
@@ -180,9 +208,13 @@
 </style>
 
 <script>
-    import Icon from 'laravel-mix-vue-svgicon/IconComponent.vue';
+    import Envelope from '../assets/svg/envelope.svg?ico'
+    import Telephone from '../assets/svg/telephone.svg?ico'
+    import Fb from '../assets/svg/facebook.svg?ico'
+    import Instagram from '../assets/svg/instagram.svg?ico'
+    import LinkedIn from '../assets/svg/linkedin.svg?ico'
     export default {
-        components:{Icon},
+        components:{Telephone, Envelope, Fb, Instagram, LinkedIn},
 
     }
 </script>

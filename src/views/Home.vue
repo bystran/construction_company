@@ -5,9 +5,9 @@
         <about></about>
         <perks></perks>
         <references></references>
-        <!-- <reviews></reviews>
+        <reviews></reviews>
         <contact></contact>
-        <footer-cmp></footer-cmp> -->
+        <footer-cmp></footer-cmp>
     
     </div>
     
@@ -19,9 +19,9 @@ import Services      from "./Home.services"
 import About         from "./Home.about"
 import Perks         from "./Home.perks"
 import References    from "./Home.references"
-// import Reviews       from "./Home.reviews"
-// import Contact       from "./Home.contact"
-// import FooterCmp from '../components/Footer';
+import Reviews       from "./Home.reviews"
+import Contact       from "./Home.contact"
+import FooterCmp from '../components/Footer';
 export default {
     components:{
         Home, 
@@ -29,9 +29,9 @@ export default {
         About, 
         Perks,
         References, 
-        // Reviews, 
-        // Contact,
-        // FooterCmp
+        Reviews, 
+        Contact,
+        FooterCmp
     },
         
 }

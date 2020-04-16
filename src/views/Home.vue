@@ -1,12 +1,12 @@
 <template>
     <div>
-        <home></home>
-        <services></services>
-        <about></about>
-        <perks></perks>
-        <references></references>
+        <home v-observe-visibility="(isVisible, entry) => visibilityChanged(isVisible, entry, 'domov')"></home>
+        <services v-observe-visibility="(isVisible, entry) => visibilityChanged(isVisible, entry, 'sluzby')"></services>
+        <about v-observe-visibility="(isVisible, entry) => visibilityChanged(isVisible, entry, 'o-nas')"></about>
+        <perks ></perks>
+        <references v-observe-visibility="(isVisible, entry) => visibilityChanged(isVisible, entry, 'referencie')"></references>
         <reviews></reviews>
-        <contact></contact>
+        <contact v-observe-visibility="(isVisible, entry) => visibilityChanged(isVisible, entry, 'kontakt')"></contact>
         <footer-cmp></footer-cmp>
     
     </div>
@@ -33,6 +33,12 @@ export default {
         Contact,
         FooterCmp
     },
+    methods:{
+        visibilityChanged (isVisible, entry, path) {
+            console.log(entry)
+            this.$router.push({path:path})
+        }
+    }
         
 }
 </script>

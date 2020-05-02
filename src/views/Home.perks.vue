@@ -123,28 +123,28 @@
             return{
                 services:[
                     {icon:Diamond,
-                     heading:'Stavba na kluc',
-                     text:'Postráme sa o všetky starosti, birokraciu, návrh, stavbu a riešenie problemov, aby ste vy nemuseli.'
+                     heading:'Stavba na kľúč',
+                     text:'Postaráme sa o všetko od projektu, cez rýchlu administratívu vďaka našim dlhoročným skúsenostiam, až po kolaudácu. – Vaša stavba pre Vás nebude starosťou.'
                      },
                     {icon:Diamond,
                      heading:'Flexibilita',
-                     text: 'Máte špecialne požiadavky? Nastavili sme naše procesi tak aby sme vyhoveli vašim novím požiadavkam.'
-                     },
+                     text: 'Máte špeciálne požiadavky?  Sme tu na to, aby sme  ich spoločne sprocesovali k Vašej spokojnosti.'
+                    },
                      {icon:Diamond,
-                     heading:'Priatelsky pristup',
-                     text:'S úsmevom na tvári v každej situácii.'
+                     heading:'Priateľský prístup',
+                     text:'S úsmevom na tvári v každej situácii. S nami Vás čaká vždy promptné riešenie a rýchla komunikácia počas celého trvania výstavby. Aktuálne  a vždy pravdivé informácie o dianí.' 
                      },
                      {icon:Diamond,
                      heading:'Dôraz na kvalitu',
-                     text:'Kvalita je u nás na prvom mieste. V každej fáze projektu dohliadame na to že všetko podlieha naším prísnim štandardom.'
+                     text:'Kvalita je u nás na prvom mieste. V každej fáze dohľiadame na to,  aby každá časť projektu podliehala naším prísnym štandardom a Vašim predstavám.'
                      },
                      {icon:Diamond,
                      heading:'Skúsenosti',
-                     text: 'Máme vyše 10 rokov a 50+ úspešne dokončených projektov.'
+                     text: 'Máme vyše 20 rokov skúseností , desiatky úspešne dokončených projektov a spokojných klientov'
                      },
                     {icon:Diamond,
                      heading:'Transparencia',
-                     text:'Všetko bez starostí? To neznamená, že neviete ako je na tom vaša stavaba. Je pre nás dôležité aby ste mali úplný prehľad o vašej stavbe a preto poskytujeme naším zákazníkom časté update-y.'
+                     text:'Všetko bez starostí znamená, že vždy viete ako je na tom Vaša stavaba. Je pre nás dôležité, aby ste mali úplný prehľad o každej faze stavby  a preto poskytujeme naším zákazníkom časté a vždy aktuálne informácie. Máme za to, že len takýmto spôsobom a korektným jednaním je možné vystavať projekt tak, aby viedol k Vašej spokojnosti ba predčil Vaše očakávania.'
                      },
                 ]
             }

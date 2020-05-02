@@ -11,17 +11,16 @@
                 <div class="centered-h2">
                     <h2 class='underlined '>O nás</h2>
                 </div>
-                <p class=''>
-                    Žijeme a dýchame stavebníctvo. Našim cieľom je vám pomôcť premeniť vašu vysnívanú stavbu v realitu. Už desať rokov spolupracujeme s talentovanými architektami, remeselníkmi na rôznych projektoch. Od sťaby kancelárskych priestorov, športových hál až po exkluzívne rezidenčne stavby. 
-                </p>
-                <br />
                 <p>
-                    V SR WORLD vieme že každá stavba a každý zákazník si vyžaduje individuálny prístup a preto staviame s dušou. 
+                    Žijeme a dýchame stavebníctvom -  staviame „ s dušou“. Našim cieľom je Vám pomôcť premeniť Vašu vysnívanú stavbu v realitu. Už takmer dvadsať rokov spolupracujeme s talentovanými architektami a remeselníkmi na rôznych projektoch. Od návrhov a realizácií  kancelárskych priestorov, športových a relaxačných priestorov až po exkluzívne rezidenčne stavby. 
                 </p>
-                <br />
                 <p>
-                    Pochádzame z Bratislavy ale pôsobíme na celom Slovensku.
+                    V SR WORLD vieme, že každá stavba a každý zákazník si vyžaduje individuálny prístup a preto všetky stavby vyhotovujeme tak, aby  realizácia viedla k dokonalej spokojnosti každého zákazníka. Či staviate nový dom, prerábate nehnuteľnosť alebo sa rozhodujete riešiť prístavbu, staviate nebytový alebo iný priestor, sme tu na to, aby ste sa s nami vždy mohli poradiť. Aby ste si pri odovzdávaní vyhotovenej stavby mohli povedať, že sa Váš sen stal skutočnosťou bez toho, aby Vám zobral všetok voľný čas. S nami zistíte, ako je pre Vás výstavba jednoduchá, pretože Vás odbremeníme od administratívy a zároveň Vás vždy informujeme o aktuálnom dianí a pokročení vo výstavbe. To je stavanie s dušou. 
                 </p>
+                <p>
+                    V SR WORLD staviame primárne v Bratislave a okolí  ale pôsobíme na celom Slovensku.
+                </p>
+
             </div>
         </div>
 

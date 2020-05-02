@@ -106,15 +106,16 @@
 
                     {icon:'diamond',
                      heading:'Poradenstvo',
-                     text:'Radi sa s Vami podelíme o naše know-how v oblasti stavebníctva. Čo sa týka stavby, poradíme vám s každým problémom.'
+                     text:'Ponúkame Vám naše dlhoročné skúsenosti a know-how v oblasti dizajnu a stavebníctva. Pristupujeme ku každému projektu tak, aby sme spoločne našli ideálne riešenie, k čomu prispejeme našimi skúsenosťami a odborným poradenstvom.'
                      },
                      {icon:'diamond',
                      heading:'Projektovanie',
-                     text:'Pomôžeme vám premeniť vašu ideu v realitu. Spolu s našim dizajnérmi a overenými architektmi vám vypracujeme riešenie na mieru.'
+                     text:"Pomôžeme vám premeniť Vašu ideu v realitu. Spolu s našim dizajnérmi a overenými architektmi Vám vypracujeme riešenie na mieru a to pre akokoľvek náročné aj nenáročné stavby. Vypracujeme pre Vás projektovú dokumentáciu rôznych druhov pozemných stavieb ako rodinné domy, bytové domy, nebytové stavby, priemyselné stavby a iné. Ukážeme Vám, ako sa dá vniesť duša do Vášho nového domu. Zrekonštruujeme Vašu ambulanciu, predajňu, salón či byt."
+                    
                      },
                      {icon:'diamond',
                       heading:'Sprostredkovanie',
-                      text:"Zaručíme rýchle a efektívne sprostredkovanie stavby. Postaráme sa o všetko;- Od vašej počiatočnej požiadavky, cez prvú položenu tehlu až po odovzdanie kľúču. Všetko transparentne a bez starosti."
+                      text:"V SR WORLD sa postaráme o všetko. Zaručíme Vám rýchle a efektívne riešenie Vašej stavby. Od analýzy Vašej počiatočnej predstavy a administratívy, cez prvú položenú tehlu, až po kolaudáciu a doriešenie všetkých drobností. Všetko transparentne a bez starostí teda vyriešite pod jednou strechou s našimi dlhoročnými kontaktmi."
                     },
                 ]
             }

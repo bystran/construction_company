@@ -12,7 +12,7 @@
             <h2 class='underlined text-center'>Služby</h2>
         </div>
         <div class="services-container">
-            <div v-for="(service, index) in services" v-bind:key="index" class='service-wrapper'>
+            <div v-for="(service, index) in services" v-bind:key="index" class='service-wrapper' v-bind:class='[index != 1 ? "smaller":"larger"]'>
                 <service 
                     v-bind:heading='service.heading'
                     v-bind:icon='service.icon'
@@ -66,29 +66,52 @@
         margin-left:5%;
     }
     .service-wrapper{
-        
         padding:25px 7%;
-        flex-basis: 87%;
-        flex-grow: 0;
-        flex-shrink: 0;
         @include md{
-            flex-basis: 350px;
-            padding:25px 12px;
-            .banner{
-                height: 190px;
-                font-size:14px;
+            &.smaller{
+             padding:25px 20%;
             }
         }
         @include lg{
-            margin-top:20px;
+            padding:0px !important;
+            flex-basis: 300px;
+            &.larger{
+                height: 550px;
+            }
+            &.smaller{
+                height: 400px;
+            }
+            .banner{
+                height: 100%;
+            }
+
         }
+        @include xl{
+            flex-basis: 350px;
+            &.larger{
+                height: 430px;
+            }
+            &.smaller{
+                height: 350px;
+            }
+        }
+
     }
     .services-container{
-        display: flex;
-        flex-wrap: wrap;
-        @include md{
-            justify-content: center;
+        @include lg{
+            display: flex;
+            width:1000px;
+            height: fit-content;
+            align-items: center;
+            margin:auto;
+            justify-content: space-evenly;
         }
+
+        @include xl{
+            width: 1200px;
+        }
+
+
     }
 </style>
 

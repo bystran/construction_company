@@ -153,12 +153,18 @@
            @include md{
                font-size:23px;
            }
+           @include xl{
+               font-size: 20px;
+           }
         }
         p.normal{
             font-size:13px;
             font-weight: normal;
             @include md{
-                font-size:16px;
+                font-size:15px;
+            }
+            @include xl{
+                font-size:13px;
             }
         }
     }

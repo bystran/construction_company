@@ -9,8 +9,8 @@
         <div class="container">
          
             <div v-for="(reference, index) in references" v-bind:key="index" class='reference-wrp'>
-            
-                <div class="reference-img"  v-bind:style="{ backgroundImage: 'url('+reference.img+')'}">
+                
+                <div class="reference-img"  v-lazy:background-image="reference.img">
                     <div class="img-label"> <p>{{reference.heading}}</p></div>
                 </div>
  

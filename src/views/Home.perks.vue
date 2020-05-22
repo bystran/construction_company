@@ -1,7 +1,7 @@
 <template>
     <div class='perks-container '>
         <div class="centered-h2">
-            <h1 class="section-number dark-blue-c">
+            <h1 class="section-number dark-blue-c" id='perks'>
                 03
             </h1>
         </div>

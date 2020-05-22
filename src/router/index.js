@@ -2,7 +2,10 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import VueLazyload from 'vue-lazyload'
+import vueSmoothScroll from 'vue2-smooth-scroll'
 
+
+Vue.use(vueSmoothScroll)
 Vue.use(VueRouter)
 Vue.use(VueLazyload)
 

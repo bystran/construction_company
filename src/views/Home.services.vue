@@ -1,5 +1,5 @@
 <template>
-    <div class='services-section'>
+    <div class='services-section' id='services'>
         <span id="planet-wm" class="w-full fill-current stroke-current">
             <div>
                  <PlanetWM class="w-full fill-current stroke-current" />

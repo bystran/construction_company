@@ -1,5 +1,5 @@
 <template>
-    <div class="flex-center position-ref full-height bg-ba">
+    <div class="flex-center position-ref full-height bg-ba" id='home'>
         <div class="content-main-page">
             <h1>Kompletné riešenia stavby.</h1>
             <h2>Staviame s dušou.</h2>

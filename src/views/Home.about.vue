@@ -1,5 +1,5 @@
 <template>
-    <div class='about-wrapper'>
+    <div class='about-wrapper' id='about'>
         <h1 class="section-number light-blue-c">
             02
         </h1>

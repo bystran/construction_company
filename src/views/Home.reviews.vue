@@ -1,5 +1,5 @@
 <template>
-    <div class='reviews-container'>
+    <div class='reviews-container' id='reviews'>
         <h1 class="section-number dark-blue-c">
             05
         </h1>

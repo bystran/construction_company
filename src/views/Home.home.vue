@@ -1,8 +1,8 @@
 <template>
-    <div class="flex-center position-ref full-height bg-ba">
+    <div class="flex-center position-ref full-height bg-ba" id='home'>
         <div class="content-main-page">
             <h1>Kompletné riešenia stavby.</h1>
-            <h2>Manažment a konzultácia.</h2>
+            <h2>Staviame s dušou.</h2>
 
         </div>
     <!-- <icon icon="down-icon-box" class="w-full fill-current stroke-current" id='downIcon'></icon>  -->

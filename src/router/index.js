@@ -1,15 +1,31 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
+import VueLazyload from 'vue-lazyload'
+import vueSmoothScroll from 'vue2-smooth-scroll'
 
+
+Vue.use(vueSmoothScroll)
 Vue.use(VueRouter)
+Vue.use(VueLazyload)
 
 const routes = [
   {
     path: '*',
     name: 'Home',
-    component: Home
+    component: Home,
   },
+<<<<<<< HEAD
+=======
+  // {
+  //   path: '/about',
+  //   name: 'About',
+  //   // route level code-splitting
+  //   // this generates a separate chunk (about.[hash].js) for this route
+  //   // which is lazy-loaded when the route is visited.
+  //   component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+  // }
+>>>>>>> 0.1.0
 ]
 
 const router = new VueRouter({

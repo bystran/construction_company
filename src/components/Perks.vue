@@ -50,14 +50,19 @@
             
         }
         .icon{
-            display: inline;
-            margin-left:-22px;
+            margin-left: -22px;
+            width: 40px !important;
+            overflow: hidden;
+            padding-left: 10px;
+            display: inline-block;
             div{
                 display:inline;
                 svg{
                     height: 34px;
                     fill: #44A1E7;
-                    padding-left: 10px
+                    display: block;
+                    width: 100%;
+
                 }
             }
         }

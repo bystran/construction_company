@@ -1,5 +1,5 @@
 <template>
-    <div class='services-section'>
+    <div class='services-section' id='services'>
         <span id="planet-wm" class="w-full fill-current stroke-current">
             <div>
                  <PlanetWM class="w-full fill-current stroke-current" />
@@ -12,7 +12,7 @@
             <h2 class='underlined text-center'>Služby</h2>
         </div>
         <div class="services-container">
-            <div v-for="(service, index) in services" v-bind:key="index" class='service-wrapper'>
+            <div v-for="(service, index) in services" v-bind:key="index" class='service-wrapper' v-bind:class='[index != 1 ? "smaller":"larger"]'>
                 <service 
                     v-bind:heading='service.heading'
                     v-bind:icon='service.icon'
@@ -66,29 +66,52 @@
         margin-left:5%;
     }
     .service-wrapper{
-        
         padding:25px 7%;
-        flex-basis: 87%;
-        flex-grow: 0;
-        flex-shrink: 0;
         @include md{
-            flex-basis: 350px;
-            padding:25px 12px;
-            .banner{
-                height: 190px;
-                font-size:14px;
+            &.smaller{
+             padding:25px 20%;
             }
         }
         @include lg{
-            margin-top:20px;
+            padding:0px !important;
+            flex-basis: 300px;
+            &.larger{
+                height: 550px;
+            }
+            &.smaller{
+                height: 400px;
+            }
+            .banner{
+                height: 100%;
+            }
+
         }
+        @include xl{
+            flex-basis: 350px;
+            &.larger{
+                height: 430px;
+            }
+            &.smaller{
+                height: 350px;
+            }
+        }
+
     }
     .services-container{
-        display: flex;
-        flex-wrap: wrap;
-        @include md{
-            justify-content: center;
+        @include lg{
+            display: flex;
+            width:1000px;
+            height: fit-content;
+            align-items: center;
+            margin:auto;
+            justify-content: space-evenly;
         }
+
+        @include xl{
+            width: 1200px;
+        }
+
+
     }
 </style>
 
@@ -106,15 +129,16 @@
 
                     {icon:'diamond',
                      heading:'Poradenstvo',
-                     text:'Radi sa s Vami podelíme o naše know-how v oblasti stavebníctva. Čo sa týka stavby, poradíme vám s každým problémom.'
+                     text:'Ponúkame Vám naše dlhoročné skúsenosti a know-how v oblasti dizajnu a stavebníctva. Pristupujeme ku každému projektu tak, aby sme spoločne našli ideálne riešenie, k čomu prispejeme našimi skúsenosťami a odborným poradenstvom.'
                      },
                      {icon:'diamond',
                      heading:'Projektovanie',
-                     text:'Pomôžeme vám premeniť vašu ideu v realitu. Spolu s našim dizajnérmi a overenými architektmi vám vypracujeme riešenie na mieru.'
+                     text:"Pomôžeme vám premeniť Vašu ideu v realitu. Spolu s našim dizajnérmi a overenými architektmi Vám vypracujeme riešenie na mieru a to pre akokoľvek náročné aj nenáročné stavby. Vypracujeme pre Vás projektovú dokumentáciu rôznych druhov pozemných stavieb ako rodinné domy, bytové domy, nebytové stavby, priemyselné stavby a iné. Ukážeme Vám, ako sa dá vniesť duša do Vášho nového domu. Zrekonštruujeme Vašu ambulanciu, predajňu, salón či byt."
+                    
                      },
                      {icon:'diamond',
                       heading:'Sprostredkovanie',
-                      text:"Zaručíme rýchle a efektívne sprostredkovanie stavby. Postaráme sa o všetko;- Od vašej počiatočnej požiadavky, cez prvú položenu tehlu až po odovzdanie kľúču. Všetko transparentne a bez starosti."
+                      text:"V SR WORLD sa postaráme o všetko. Zaručíme Vám rýchle a efektívne riešenie Vašej stavby. Od analýzy Vašej počiatočnej predstavy a administratívy, cez prvú položenú tehlu, až po kolaudáciu a doriešenie všetkých drobností. Všetko transparentne a bez starostí teda vyriešite pod jednou strechou s našimi dlhoročnými kontaktmi."
                     },
                 ]
             }

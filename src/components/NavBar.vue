@@ -11,11 +11,11 @@
 
                     <div class="hidden-nav" v-bind:class="{ toggled : isToggled}">
                         <ul class=''>
-                            <li >Domov</li>
-                            <li >Služby</li>
-                            <li >O nás</li>
-                            <li >Referencie</li>
-                            <li > <a href="" class="btn btn-primary">Napíšte nám</a> </li>
+                            <li ><a href="#home" v-smooth-scroll>Domov</a></li>
+                            <li > <a href="#services" v-smooth-scroll>Služby</a></li>
+                            <li > <a href="#about" v-smooth-scroll>O nás</a></li>
+                            <li> <a href="#gallery" v-smooth-scroll>Referencie</a></li>
+                            <li > <a href="#contact" v-smooth-scroll class="btn btn-primary">Napíšte nám</a> </li>
                         </ul>
 
                     </div>
@@ -225,6 +225,14 @@ export default {
         li{
             font-size:1.2em;
             padding:7px;
+            a{
+                text-decoration: inherit;
+                color: inherit;
+                &:active{
+                    text-decoration: inherit;
+                    color: inherit;
+                }
+            }
         }
         @include md{
             position:relative;

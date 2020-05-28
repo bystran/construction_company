@@ -1,7 +1,7 @@
 <template>
     <div class='perks-container '>
         <div class="centered-h2">
-            <h1 class="section-number dark-blue-c">
+            <h1 class="section-number dark-blue-c" id='perks'>
                 03
             </h1>
         </div>
@@ -117,34 +117,39 @@
 <script>
     import Service from "../components/Perks"; 
     import Diamond from "../assets/svg/diamond.svg?ico"
+    import Key from '../assets/svg/key.svg?ico'
+    import SwissKnife from '../assets/svg/swiss_knife.svg?ico'
+    import Zoom from '../assets/svg/seo-and-web.svg?ico'
+    import Award from '../assets/svg/award.svg?ico'
+    import Friendly from '../assets/svg/hands-and-gestures.svg?ico'; 
     export default {
         components:{Service},
         data(){
             return{
                 services:[
-                    {icon:Diamond,
-                     heading:'Stavba na kluc',
-                     text:'Postráme sa o všetky starosti, birokraciu, návrh, stavbu a riešenie problemov, aby ste vy nemuseli.'
+                    {icon:Key,
+                     heading:'Stavba na kľúč',
+                     text:'Postaráme sa o všetko od projektu, cez rýchlu administratívu vďaka našim dlhoročným skúsenostiam, až po kolaudácu. – Vaša stavba pre Vás nebude starosťou.'
                      },
-                    {icon:Diamond,
+                    {icon:SwissKnife,
                      heading:'Flexibilita',
-                     text: 'Máte špecialne požiadavky? Nastavili sme naše procesi tak aby sme vyhoveli vašim novím požiadavkam.'
-                     },
-                     {icon:Diamond,
-                     heading:'Priatelsky pristup',
-                     text:'S úsmevom na tvári v každej situácii.'
+                     text: 'Máte špeciálne požiadavky?  Sme tu na to, aby sme  ich spoločne sprocesovali k Vašej spokojnosti.'
+                    },
+                     {icon:Friendly,
+                     heading:'Priateľský prístup',
+                     text:'S úsmevom na tvári v každej situácii. S nami Vás čaká vždy promptné riešenie a rýchla komunikácia počas celého trvania výstavby. Aktuálne  a vždy pravdivé informácie o dianí.' 
                      },
                      {icon:Diamond,
                      heading:'Dôraz na kvalitu',
-                     text:'Kvalita je u nás na prvom mieste. V každej fáze projektu dohliadame na to že všetko podlieha naším prísnim štandardom.'
+                     text:'Kvalita je u nás na prvom mieste. V každej fáze dohľiadame na to,  aby každá časť projektu podliehala naším prísnym štandardom a Vašim predstavám.'
                      },
-                     {icon:Diamond,
+                     {icon:Award,
                      heading:'Skúsenosti',
-                     text: 'Máme vyše 10 rokov a 50+ úspešne dokončených projektov.'
+                     text: 'Máme vyše 20 rokov skúseností , desiatky úspešne dokončených projektov a spokojných klientov'
                      },
-                    {icon:Diamond,
+                    {icon:Zoom,
                      heading:'Transparencia',
-                     text:'Všetko bez starostí? To neznamená, že neviete ako je na tom vaša stavaba. Je pre nás dôležité aby ste mali úplný prehľad o vašej stavbe a preto poskytujeme naším zákazníkom časté update-y.'
+                     text:'Všetko bez starostí znamená, že vždy viete ako je na tom Vaša stavaba. Je pre nás dôležité, aby ste mali úplný prehľad o každej faze stavby  a preto poskytujeme naším zákazníkom časté a vždy aktuálne informácie. Máme za to, že len takýmto spôsobom a korektným jednaním je možné vystavať projekt tak, aby viedol k Vašej spokojnosti ba predčil Vaše očakávania.'
                      },
                 ]
             }

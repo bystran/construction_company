@@ -1,12 +1,12 @@
 <template>
     <div>
-        <home v-observe-visibility="(isVisible, entry) => visibilityChanged(isVisible, entry, 'domov')"></home>
-        <services v-observe-visibility="(isVisible, entry) => visibilityChanged(isVisible, entry, 'sluzby')"></services>
-        <about v-observe-visibility="(isVisible, entry) => visibilityChanged(isVisible, entry, 'o-nas')"></about>
-        <perks ></perks>
-        <references v-observe-visibility="(isVisible, entry) => visibilityChanged(isVisible, entry, 'referencie')"></references>
-        <reviews></reviews>
-        <contact v-observe-visibility="(isVisible, entry) => visibilityChanged(isVisible, entry, 'kontakt')"></contact>
+        <home></home>
+        <services></services>
+        <about></about>
+        <perks></perks>
+        <!-- <references></references>
+        <reviews></reviews> -->
+        <contact></contact>
         <footer-cmp></footer-cmp>
     
     </div>
@@ -18,8 +18,8 @@ import Home          from "./Home.home"
 import Services      from "./Home.services"
 import About         from "./Home.about"
 import Perks         from "./Home.perks"
-import References    from "./Home.references"
-import Reviews       from "./Home.reviews"
+// import References    from "./Home.references"
+// import Reviews       from "./Home.reviews"
 import Contact       from "./Home.contact"
 import FooterCmp from '../components/Footer';
 export default {
@@ -28,8 +28,8 @@ export default {
         Services, 
         About, 
         Perks,
-        References, 
-        Reviews, 
+        // References, 
+        // Reviews, 
         Contact,
         FooterCmp
     },

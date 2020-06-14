@@ -2,12 +2,11 @@
     <footer class='footer'>
         <div class="small-hidden">
             <ul class="footer-nav">
-                <li class="">Domov</li>
-                <li class="">Služby</li>
-                <li class="">O nás</li>
-                <li class=''>Referencie</li>
-                <li class="">Recenzie</li>
-                <li class="">Kontakt</li>
+                                            <li ><a href="#home" v-smooth-scroll>Domov</a></li>
+                            <li > <a href="#services" v-smooth-scroll>Služby</a></li>
+                            <li > <a href="#about" v-smooth-scroll>O nás</a></li>
+                            <li> <a href="#gallery" v-smooth-scroll>Referencie</a></li>
+                            <li > <a href="#contact" v-smooth-scroll>Napíšte nám</a> </li>
             </ul>
 
             <hr class=''>
@@ -26,7 +25,8 @@
                              <Telephone />
                         </div>
                     </span>
-                    <span v-bind="config.contact.phone">
+                    <span>
+                        {{ contact.phone_number }}
                     </span>
                 </li>
                 <li>
@@ -35,31 +35,27 @@
                             <Envelope />
                         </div>
                     </span>
-                    info@srworld.sk
+                        {{contact.email}}
                 </li>
             </ul>
         </div>
         <ul class="icons">
             <li class="">
                 <span>
-                    <div>
-                        <Fb />
-                    </div>
+                    <a v-bind:href="contact.social_media.facebook" alt="facebook">
+                        <div>
+                            <Fb />
+                        </div>
+                    </a>
                 </span>
             </li>
             <li class="">
                 <span>
-                    <div>
-                        <LinkedIn />     
-                    </div>
-                </span>
-       
-            </li>
-            <li class="">
-                <span>
-                    <div>
-                        <Instagram />
-                    </div>
+                    <a v-bind:href="contact.social_media.instagram" alt="instagram">
+                        <div>
+                            <Instagram />
+                        </div>
+                    </a>
                 </span>
             </li>
         </ul>
@@ -111,8 +107,13 @@
         }
     }
     .footer{
+        a{
+            color: inherit; /* blue colors for links too */
+            text-decoration: inherit; /* no underline */
+        }
         
         padding:5% 7%;
+        padding-bottom: 0px;
         background: #081F62;
         background: linear-gradient(
             0deg, rgba(83,95,128,0.58) .5px,
@@ -213,11 +214,18 @@
     import Telephone from '../assets/svg/telephone.svg?ico'
     import Fb from '../assets/svg/facebook.svg?ico'
     import Instagram from '../assets/svg/instagram.svg?ico'
-    import LinkedIn from '../assets/svg/linkedin.svg?ico'
+
+
+    import contact from '../content/contact'
   
 
     export default {
-        components:{Telephone, Envelope, Fb, Instagram, LinkedIn},
+        components:{Telephone, Envelope, Fb, Instagram},
+        data(){
+            return{
+                contact:contact,
+            }
+        }
 
     }
 </script>

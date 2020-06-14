@@ -1,9 +1,11 @@
 <template>
     <div class="flex-center position-ref full-height bg-ba" id='home'>
         <div class="content-main-page">
-            <h1>Kompletné riešenia stavby.</h1>
-            <h2>Staviame s dušou.</h2>
-
+            <!-- <h2>Kompletné riešenia stavby.</h2> -->
+            <h1>Vaša budúca stavba bez starostí.</h1>
+            <h3>Odbremeníme Vás od administratívy a zároveň Vás vždy informujeme o aktuálnom dianí a pokročení vo výstavbe.</h3>
+            <a href="#contact" v-smooth-scroll class="btn btn-primary">Napíšte nám</a> 
+            <a href="#services" v-smooth-scroll class="btn btn-secondary">Zistite viacej</a> 
         </div>
     <!-- <icon icon="down-icon-box" class="w-full fill-current stroke-current" id='downIcon'></icon>  -->
     </div>
@@ -56,6 +58,7 @@ $screen-xl-min: 1200px;
         @content;
     }
 }
+
 .full-height {
     height: 100vh;
 }
@@ -95,33 +98,46 @@ $screen-xl-min: 1200px;
     @include rwd(1800){
         padding:0px 20%;
     }
+    @include sm{
+        h1{
+            font-size:35px;
+        }
+    }
+    .btn{
+        margin-top:20px;
+        display:inline-block;
+    }
 
     h1{
         font-family: "Titillium Web";
-        font-weight: lighter;
-        font-size:25px;
+        font-weight: bold;
+        font-size:30px;
         // font-size: 79px;
-        text-align: center;
+        text-align: left;
         
         margin:0px;
+        margin-top:-40px;
 
 
     }
     h2{
         font-size:18px;
-        text-align: right;
+        text-align: left;
         font-weight: normal;
         
     }
     h3{
-        font-size:1.2em;
+        font-size:15px;
+        text-align: left;
+        font-weight: normal;
+        opacity:0.90;
     }
     a{
         margin-top:.5em;
     }
     @include md{
         h1{
-            font-size:50px;
+            font-size:500px;
         }
 
     }

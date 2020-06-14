@@ -11,6 +11,7 @@
                 v-model.trim="$v.contactForm.firstName.$model"
                 @focus="active.firstName = true"
                 @blur="active.firstName = false"
+                @input="delayTouch($v.contactForm.firstName)"
                 >
                 <div class="error" v-if="backend_errors.first_name">{{ backend_errors.first_name }}</div>
                 <div v-if="$v.contactForm.firstName.$error">
@@ -30,6 +31,7 @@
                 v-model.trim="$v.contactForm.lastName.$model"
                 @focus="active.lastName = true"
                 @blur="active.lastName = false"
+                @input="delayTouch($v.contactForm.lastName)"
                 >
                 <div class="error" v-if="backend_errors.last_name">{{ backend_errors.last_name }}</div>
                  <div v-if="$v.contactForm.lastName.$error">
@@ -48,6 +50,7 @@
                 v-model.trim="$v.contactForm.email.$model"
                 @focus="active.email = true"
                 @blur="active.email = false"
+                @input="delayTouch($v.contactForm.email)"
                 >
                 <div class="error" v-if="backend_errors.email_name">{{ backend_errors.email_name }}</div>
                 <div v-if="$v.contactForm.email.$error">
@@ -65,6 +68,7 @@
                 v-model.trim="$v.contactForm.message.$model"
                 @focus="active.message = true"
                 @blur="active.message = false"
+                @input="delayTouch($v.contactForm.message)"
                 ></textarea>
                 <div class="error" v-if="backend_errors.message">{{ backend_errors.message }}</div>
                 <div v-if="$v.contactForm.message.$error">
@@ -177,6 +181,8 @@ import { required, email, minLength, maxLength } from "vuelidate/lib/validators"
 import {sendForm} from '../services/formService'
 import VueLoadingButton from 'vue-loading-button';
 
+const touchMap = new WeakMap()
+
 export default {
     components:{
         VueLoadingButton,
@@ -231,11 +237,18 @@ export default {
         }
     },
     methods:{
+        delayTouch($v) {
+            $v.$reset()
+            if (touchMap.has($v)) {
+                clearTimeout(touchMap.get($v))
+            }
+            touchMap.set($v, setTimeout($v.$touch, 1000))
+        },
         handleSubmit: async function(e){
             e.preventDefault();
             this.$v.$touch()
             if(this.$v.$invalid){
-                console.log('error')
+
                 this.button.failed = true 
                 setTimeout(()=>{
                     this.button.failed = false
@@ -257,7 +270,12 @@ export default {
                         position: "top-center", 
                         duration : 5000
                     });
-                    console.log('success')
+                    this.contactForm.firstName = ''
+                    this.contactForm.lastName = ''
+                    this.contactForm.email = ''
+                    this.contactForm.message = ''
+                    this.$v.$reset()
+
                 }else{
                     this.backend_errors = res.errors;
                     if(res.network_error){

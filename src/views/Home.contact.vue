@@ -23,7 +23,7 @@
                                     <Telephone />
                                 </div>
                             </span>
-                            0903 267 726
+                            {{ contact.phone_number }}
                         </li>
                         <li>
                             <span>
@@ -31,7 +31,7 @@
                                     <Envelope />
                                 </div>
                             </span>
-                            info@srworld.sk
+                            {{ contact.email }}
                         </li>
                     </ul>
                 </div>
@@ -47,11 +47,11 @@
                     <ul class='contact-info pt-3'>
                         <li>
                             <b>IČO</b>
-                            36 829 447
+                            {{ contact.company_info.ico }}
                         </li>
                         <li>
                             <b>IČ DPH</b>
-                            SK2022440101
+                            {{ contact.company_info.icdph}}
                         </li>
                         <li>
                             <span class="w-full fill-current stroke-current" >
@@ -59,10 +59,10 @@
                                     <Placeholder/>
                                 </div>
                             </span>
-                            Jašíkova 3151/15
+                            {{ contact.company_info.address.street }} {{ contact.company_info.address.num }}
                         </li>
                         <li>
-                            <span class="margin-left">821 03 Bratislava</span>
+                            <span class="margin-left">{{ contact.company_info.address.post_code }} {{ contact.company_info.address.city }}</span>
                         </li>
                     </ul>
                 </div>
@@ -187,9 +187,17 @@
     import Envelope from '../assets/svg/envelope.svg?ico'
     import Telephone from '../assets/svg/telephone.svg?ico'
     import ContactForm from "../components/ContactForm"
+
+    import contact from '../content/contact'
+
     export default {
         components:{ContactForm,
          Placeholder, Envelope, Telephone},
+        data(){
+            return{
+                contact
+            }
+        }
 
     }
 

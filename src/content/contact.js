@@ -8,7 +8,7 @@ const data = {
         icdph:"SK2022440101",
         address:{
             street:"Jašíkova",
-            num: "15",
+            num: "3151/15",
             post_code:"821 03",
             city:"Bratislava",
         }

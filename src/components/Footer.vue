@@ -26,7 +26,8 @@
                              <Telephone />
                         </div>
                     </span>
-                    0903 267 726
+                    <span v-bind="config.contact.phone">
+                    </span>
                 </li>
                 <li>
                     <span>
@@ -213,6 +214,8 @@
     import Fb from '../assets/svg/facebook.svg?ico'
     import Instagram from '../assets/svg/instagram.svg?ico'
     import LinkedIn from '../assets/svg/linkedin.svg?ico'
+  
+
     export default {
         components:{Telephone, Envelope, Fb, Instagram, LinkedIn},
 

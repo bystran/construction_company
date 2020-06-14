@@ -3,9 +3,9 @@
         <div class='contact-form-wrp'>
             <div class="x-centered">
 
-                <!-- <h2 class='underlined'> Napíšte nám.</h2> -->
+                <h2 class='underlined'> Napíšte nám.</h2>
             </div>
-            <!-- <contact-form class=''></contact-form> -->
+            <contact-form class=''></contact-form>
         </div>
         <div class="contact-info-wrp">
             <div class="">
@@ -132,6 +132,7 @@
     }
     .contact-form-wrp{
         padding:1% 7%;
+        width: 100%;
         @include md{
             width:50%;
             
@@ -185,9 +186,9 @@
     import Placeholder from '../assets/svg/placeholder.svg?ico'
     import Envelope from '../assets/svg/envelope.svg?ico'
     import Telephone from '../assets/svg/telephone.svg?ico'
-    //import ContactForm from "../components/ContactForm"
+    import ContactForm from "../components/ContactForm"
     export default {
-        components:{//ContactForm,
+        components:{ContactForm,
          Placeholder, Envelope, Telephone},
 
     }

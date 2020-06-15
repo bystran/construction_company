@@ -2,9 +2,9 @@
     <div>
         <nav class="navbar" v-bind:class="[ isUp ? 'invisible' : '', !isAtTop ? 'displaced': '']">
                 <div class="container">
-                    <router-link :to="{name: 'home'}" class="navbar-brand" id='logo'>
+                    <a href="#home" class="navbar-brand" id='logo'>
                         <Logo/>
-                    </router-link>
+                    </a>
                     <button class="navbar-toggler" type="button" v-on:click="toggleNav">
                         <tasty-burger-button type="spin" color="#fff" />
                     </button>

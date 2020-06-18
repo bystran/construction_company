@@ -9,17 +9,21 @@
             </div>
             <div class="about-text-wrp">
                 <div class="centered-h2">
-                    <h2 class='underlined '>O nás</h2>
+                    <h2 class='underlined '>Staviame s dušou</h2>
                 </div>
                 <p class='larger'>
                     Žijeme a dýchame stavebníctvom -  staviame „ s dušou“. Našim cieľom je Vám pomôcť premeniť Vašu vysnívanú stavbu v realitu. Už takmer dvadsať rokov spolupracujeme s talentovanými architektami a remeselníkmi na rôznych projektoch. Od návrhov a realizácií  kancelárskych priestorov, športových a relaxačných priestorov až po exkluzívne rezidenčne stavby. 
                 </p>
-                <p class='normal'>
+                <a href="#home" class="btn btn-secondary">
+                    Zisti viacej
+                </a>
+
+                <!-- <p class='normal'>
                     V SR WORLD vieme, že každá stavba a každý zákazník si vyžaduje individuálny prístup a preto všetky stavby vyhotovujeme tak, aby  realizácia viedla k dokonalej spokojnosti každého zákazníka. Či staviate nový dom, prerábate nehnuteľnosť alebo sa rozhodujete riešiť prístavbu, staviate nebytový alebo iný priestor, sme tu na to, aby ste sa s nami vždy mohli poradiť. Aby ste si pri odovzdávaní vyhotovenej stavby mohli povedať, že sa Váš sen stal skutočnosťou bez toho, aby Vám zobral všetok voľný čas. S nami zistíte, ako je pre Vás výstavba jednoduchá, pretože Vás odbremeníme od administratívy a zároveň Vás vždy informujeme o aktuálnom dianí a pokročení vo výstavbe. To je stavanie s dušou. 
                 </p>
                 <p class='normal'>
                     V SR WORLD staviame primárne v Bratislave a okolí  ale pôsobíme na celom Slovensku.
-                </p>
+                </p> -->
 
             </div>
         </div>
@@ -28,53 +32,12 @@
 </template>
 
 <style lang="scss" scoped>
-    // Small tablets and large smartphones (landscape view)
-    $screen-sm-min: 576px;
-
-    // Small tablets (portrait view)
-    $screen-md-min: 768px;
-
-    // Tablets and small desktops
-    $screen-lg-min: 992px;
-
-    // Large tablets and desktops
-    $screen-xl-min: 1200px;
-
-    @mixin sm {
-        @media (min-width: #{$screen-sm-min}) {
-            @content;
-        }
-    }
-
-    // Medium devices
-    @mixin md {
-        @media (min-width: #{$screen-md-min}) {
-            @content;
-        }
-    }
-
-    // Large devices
-    @mixin lg {
-        @media (min-width: #{$screen-lg-min}) {
-            @content;
-        }
-    }
-
-    // Extra large devices
-    @mixin xl {
-        @media (min-width: #{$screen-xl-min}) {
-            @content;
-        }
-    }
-    @mixin rwd($screen) {
-        @media (min-width: $screen+'px') {
-            @content;
-        }
-    }
+    @import '../mixins';
+  
     .about-content{
         display: flex;
         flex-flow: column-reverse;
-        @include lg{
+        @include mq("tablet-wide"){
             flex-flow:initial;
             justify-content: space-evenly;
             align-items:center;
@@ -98,15 +61,7 @@
             justify-content: center;
             width: 100%;
         }
-        @include md{
-            padding: 100px 60px;
-        }
-        @include lg{
-            padding:0px;
-            height:110vh;
-            display:flex;
-            align-items:center;
-        }
+        
         
     }
     h1.section-number{
@@ -125,47 +80,38 @@
     .about-image-wrp{
         width:90%;
         margin:auto;
-        @include lg{
-            width:40%;
-            margin:0px;
+        @include mq("tablet-wide"){
+            width: 200%;
+            margin-left:-20%;
+            padding-right:60px;
         }
-        @include xl{
-            width:35%;
+        @include mq("desktop"){
+            width:180%;
+            padding-right:200px;
+            
         }
+        
     }
     .about-text-wrp{
         padding-bottom:50px;
-        
-        @include md{
-            width:80%;
-            margin:auto;
+        display:flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        @include mq("tablet-wide"){
+            flex-basis: 2000px;
         }
-        @include lg{
-            width:500px;
-            margin:0px;
-            padding:0px;
+        @include mq("desktop"){
+            padding-right:100px;
         }
-
+        .btn-secondary{ 
+            width: 180px;
+            text-align: center;
+            margin-top:30px;
+        }
         p.larger{
            margin:0px; 
-           font-size:20px;
+           font-size:16px;
            font-weight: bold;
-           @include md{
-               font-size:23px;
-           }
-           @include xl{
-               font-size: 20px;
-           }
-        }
-        p.normal{
-            font-size:13px;
-            font-weight: normal;
-            @include md{
-                font-size:15px;
-            }
-            @include xl{
-                font-size:13px;
-            }
         }
     }
 

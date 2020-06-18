@@ -1,5 +1,5 @@
 <template>
-<div class="banner">
+<div class="banner" :style="{ backgroundImage: `url(../assets/images/${img})` }">
 
 
     <div class="main-container">
@@ -66,7 +66,7 @@
         props:{ 
             heading:String,
             text:String,
-            icon:String,
+            img:String,
         }
 
         

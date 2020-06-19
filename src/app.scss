@@ -35,13 +35,23 @@ a{
 }
 .btn.btn-primary{
     background: rgb(78,78,78);
-    background: $light_blue !important;
+    background: $light_blue;
     color:white !important;
+    transition: .2s background;
+    &:hover{
+        background: $darker_blue;
+    }
 }
 .btn.btn-secondary{
     color:white !important;
     border: 1px solid white;
+    transition: .2s all;
+    &:hover{
+        background: $light_blue;
+        border-color: $light_blue;
+    }
 }
+
 .btn{
     border-radius: 3px;
     font-size:0.89em;

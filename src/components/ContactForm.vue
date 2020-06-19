@@ -106,22 +106,22 @@
         label{
             color:#081F62;
             font-family: "Titillium Web";
-            font-size: 18px;
+            font-size: 16px;
             transition: .2s top, .2s font-size;
         }
         .form-group{
             margin-top:20px;
             position: relative;
             label{
-                top:16px;
-                left:5px;
+                top:17px;
+                left:10px;
                 position: absolute;
                 
             }
             &.hasValue, &.active{
                 label{
-                    top:-20px;
-                    font-size:15px;
+                    top:3px;
+                    font-size:12px;
                 }
             }
             &.active{
@@ -145,10 +145,10 @@
         }
         input, textarea{
             font-family: "Titillium Web";
-            font-size: 18px;
+            font-size: 16px;
             width: 98% ;
-            margin: 10px 0px;
-            padding:8px 1%;
+            margin: 2px 0px;
+            padding:14px 10px;
             border:none;
             color:#081F62;
             background: #fff;
@@ -171,6 +171,8 @@
             box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.1);
             font-size:18px;
             margin:25px 0px;
+            margin-top:40px;
+            width: 170px;
         }
 
     }

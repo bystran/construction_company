@@ -77,13 +77,26 @@
                     <div class="error" v-if="!$v.contactForm.message.maxLength">Správa može pozostávať z maximálne {{ $v.contactForm.message.$params.minLength.min }} písmen.</div>
                 </div>
             </div>
-            <VueLoadingButton 
-            type="submit" 
-            aria-label='Odoslať' 
-            class='btn btn-primary' 
-            :class="{'shake-horizontal shake-constant': button.failed}"
-            :loading="button.is_loading"
-            />
+            <a href="">Pozrite sa ako sa staráme o vaše osobné dáta</a>
+            <vue-recaptcha
+                sitekey="6Lf32acZAAAAAD6CoLtbGemXRbJvoGEfg2qao0j7" 
+                ref="invisibleRecaptcha"
+                size="invisible"
+                badge="inline"
+                @verify="onVerify"
+                @expired="onExpired"
+                :loadRecaptchaScript="true"
+            >
+            </vue-recaptcha>
+
+                <VueLoadingButton 
+                type="submit" 
+                aria-label='Odoslať' 
+                class='btn btn-primary' 
+                :class="{'shake-horizontal shake-constant': button.failed}"
+                :loading="button.is_loading"
+                />
+
 
         </form>
     </div>
@@ -180,12 +193,13 @@
 import { required, email, minLength, maxLength } from "vuelidate/lib/validators";
 import {sendForm} from '../services/formService'
 import VueLoadingButton from 'vue-loading-button';
+import VueRecaptcha from 'vue-recaptcha'
 
 const touchMap = new WeakMap()
 
 export default {
     components:{
-        VueLoadingButton,
+        VueLoadingButton, VueRecaptcha
     },
     data(){
         return{
@@ -194,6 +208,7 @@ export default {
                 lastName:'',
                 email:'',
                 message:'',
+                "g-recaptcha-response":''
             },
             active:{
                 firstName:false,
@@ -244,23 +259,38 @@ export default {
             }
             touchMap.set($v, setTimeout($v.$touch, 1000))
         },
+
+        onVerify: function (response) {
+            this.contactForm["g-recaptcha-response"] = response
+        },
+        onExpired: function () {
+            this.contactForm["g-recaptcha-response"] = ""
+        },
         handleSubmit: async function(e){
+            console.log("click");
+            
             e.preventDefault();
             this.$v.$touch()
-            if(this.$v.$invalid){
+            
+            this.button.is_loading = true;
 
+            await this.$refs.invisibleRecaptcha.execute()
+
+            if(this.$v.$invalid || this.contactForm["g-recaptcha-response"] == ""){
+                this.button.is_loading = false;
                 this.button.failed = true 
                 setTimeout(()=>{
                     this.button.failed = false
                 }, 500)
 
             }else{
-                this.button.is_loading = true;
+                
                 const res = await sendForm({
                     first_name: this.$v.contactForm.firstName.$model,
                     last_name: this.$v.contactForm.lastName.$model,
                     email: this.$v.contactForm.email.$model,
                     message: this.$v.contactForm.message.$model,
+                    "g-recaptcha-response": this.contactForm["g-recaptcha-response"]
                 })
                 this.button.is_loading = false
                 if(res.success){
@@ -294,7 +324,10 @@ export default {
                     }
 
                 }
+                
+                this.$refs.invisibleRecaptcha.reset() // Direct call reset method
             }
+            this.button.is_loading = false;
             
         },
 

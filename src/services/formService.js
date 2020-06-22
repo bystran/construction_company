@@ -11,7 +11,8 @@ export const sendForm = async (form, url=default_url, config = default_config) =
         first_name : form.first_name,
         last_name  : form.last_name,
         email      : form.email,
-        message    : form.message   
+        message    : form.message,
+        "g-recaptcha-response": form["g-recaptcha-response"]   
     }
     console.log(data);
 
@@ -19,7 +20,9 @@ export const sendForm = async (form, url=default_url, config = default_config) =
         const response = await axios.post(url, data, config)
         return response.data
     } catch (error) {
+        console.log(error)
         if(error.response){
+
             return error.json()
         }else if(error.request){
             console.log(error.request)

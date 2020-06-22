@@ -22,9 +22,9 @@
 
 
 .bg-ba{
-    background: url( "../assets/images/ba_blue_tint.jpg");
+    background: url( "../assets/images/new_bg.png");
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: left center;
     background-size: cover;
     position: relative;
     z-index: -50;

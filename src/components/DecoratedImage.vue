@@ -39,7 +39,7 @@
     }
     .image-box{
         width:100%;
-        background:url(../assets/images/visualisation.jpg);
+        background:url(../assets/images/office.jpg);
         background-position: center;
         background-size: cover;
         margin-top:15%;

@@ -1,7 +1,7 @@
 <template>
     <div class='perks-container '>
         <span class="watermark">
-            Čo čakať? 
+            Prečo? 
         </span>
 
         <div class="centered-h2">
@@ -11,7 +11,7 @@
         </div>
         <div class="lg-screen-wrp">
             
-            <h2 class='underlined text-center padded-h2'>Čo čakať od SR WORLD?</h2>
+            <h2 class='underlined text-center padded-h2'>Prečo s nami?</h2>
             
             <div class="perks-wrapper">
 

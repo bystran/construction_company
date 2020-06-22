@@ -9,7 +9,7 @@
 <style lang="scss" scoped>
     
     .rounded{
-        border-radius: 20px;
+        border-radius: 7px;
     }
     .abs{
         top:0;
@@ -39,7 +39,7 @@
     }
     .image-box{
         width:100%;
-        background:url(../assets/images/artisan.jpg);
+        background:url(../assets/images/office.jpg);
         background-position: center;
         background-size: cover;
         margin-top:15%;

@@ -2,7 +2,7 @@
     <div>
         <nav class="navbar" v-bind:class="[ isUp ? 'invisible' : '', !isAtTop ? 'displaced': '']">
                 <div class="container">
-                    <a href="#home" class="navbar-brand" id='logo'>
+                    <a  href="#home" v-smooth-scroll class="navbar-brand" id='logo'>
                         <Logo/>
                     </a>
                     <button class="navbar-toggler" type="button" v-on:click="toggleNav">

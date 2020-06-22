@@ -9,13 +9,13 @@
             01
         </h1>
         <div class="centered-flex">
-            <h2 class='underlined text-center'>Služby</h2>
+            <h2 class='underlined text-center'>Sme tu pre Vás</h2>
         </div>
         <div class="services-container">
             <div v-for="(service, index) in services" v-bind:key="index" class='service-wrapper' v-bind:class='[index != 1 ? "smaller":"larger"]'>
                 <service 
                     v-bind:heading='service.heading'
-                    v-bind:icon='service.icon'
+                    v-bind:img='service.img'
                     v-bind:text='service.text'
                 >
                 </service>
@@ -127,16 +127,16 @@
             return{
                 services:[
 
-                    {icon:'diamond',
+                    {img:'consulting.jpg',
                      heading:'Poradenstvo',
                      text:'Ponúkame Vám naše dlhoročné skúsenosti a know-how v oblasti dizajnu a stavebníctva. Pristupujeme ku každému projektu tak, aby sme spoločne našli ideálne riešenie, k čomu prispejeme našimi skúsenosťami a odborným poradenstvom.'
                      },
-                     {icon:'diamond',
+                     {img:'consulting.jpg',
                      heading:'Projektovanie',
                      text:"Pomôžeme vám premeniť Vašu ideu v realitu. Spolu s našim dizajnérmi a overenými architektmi Vám vypracujeme riešenie na mieru a to pre akokoľvek náročné aj nenáročné stavby. Vypracujeme pre Vás projektovú dokumentáciu rôznych druhov pozemných stavieb ako rodinné domy, bytové domy, nebytové stavby, priemyselné stavby a iné. Ukážeme Vám, ako sa dá vniesť duša do Vášho nového domu. Zrekonštruujeme Vašu ambulanciu, predajňu, salón či byt."
                     
                      },
-                     {icon:'diamond',
+                     {img:'consulting.jpg',
                       heading:'Sprostredkovanie',
                       text:"V SR WORLD sa postaráme o všetko. Zaručíme Vám rýchle a efektívne riešenie Vašej stavby. Od analýzy Vašej počiatočnej predstavy a administratívy, cez prvú položenú tehlu, až po kolaudáciu a doriešenie všetkých drobností. Všetko transparentne a bez starostí teda vyriešite pod jednou strechou s našimi dlhoročnými kontaktmi."
                     },

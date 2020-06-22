@@ -44,7 +44,7 @@
             color:#051747;
    
             padding: 20px 33px;
-            border-radius: 20px;
+            border-radius: 12px;
             border: 2px solid #081F62;
             background: white;
             

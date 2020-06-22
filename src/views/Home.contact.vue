@@ -125,6 +125,7 @@
             flex-flow: row-reverse;
             justify-content: space-around;
             padding: 5% 0px;
+            align-items: center;
 
         }
         

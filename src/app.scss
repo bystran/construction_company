@@ -17,6 +17,7 @@ html,body{
     margin: 0px;
     padding: 0px;
     overflow-x: hidden;  
+    font-size:16px;
 }
 .x-centered{
     display: flex;
@@ -34,13 +35,27 @@ a{
 }
 .btn.btn-primary{
     background: rgb(78,78,78);
-    background: $light_blue !important;
+    background: $light_blue;
     color:white !important;
+    transition: .2s background;
+    &:hover{
+        background: $darker_blue;
+    }
 }
+.btn.btn-secondary{
+    color:white !important;
+    border: 1px solid white;
+    transition: .2s all;
+    &:hover{
+        background: $light_blue;
+        border-color: $light_blue;
+    }
+}
+
 .btn{
-    border-radius: 7px;
-    font-size:0.9em;
-    padding:10px 20px;
+    border-radius: 3px;
+    font-size:0.89em;
+    padding:7px 15px;
 }
 h1,h2,h3,h4,h5, body{
     font-family: "Titillium Web";
@@ -73,7 +88,7 @@ h2.underlined {
     text-align: center;
 
     color:$darker_blue;
-    font-size: 2em;
+    font-size: 35px;
     display: inline-block;
     padding-bottom: 5px;
     position: relative;

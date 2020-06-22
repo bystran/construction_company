@@ -1,5 +1,9 @@
 <template>
     <div class='perks-container '>
+        <span class="watermark">
+            Prečo? 
+        </span>
+
         <div class="centered-h2">
             <h1 class="section-number dark-blue-c" id='perks'>
                 03
@@ -7,7 +11,7 @@
         </div>
         <div class="lg-screen-wrp">
             
-            <h2 class='underlined text-center padded-h2'>Prečo Sr World?</h2>
+            <h2 class='underlined text-center padded-h2'>Prečo s nami?</h2>
             
             <div class="perks-wrapper">
 
@@ -85,6 +89,22 @@
     .perks-container{
         padding:10% 7%;
         color:#051747;
+        position: relative;
+        .watermark{
+            display:none;
+            font-family: "Titillium Web";
+            transition: font-size .5s;
+            font-size:600px;
+            white-space: nowrap;
+            font-weight: bolder;
+            opacity: .09;
+            position: absolute;
+            top:-80px;
+            left:-150px;
+            @include xl{
+                display:inline;
+            }
+        }
     }
     .centered-h2{
         display:flex;
@@ -98,8 +118,14 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        @include lg{
+        @include xl{
             padding-top:50px;
+            height: 600px;
+            flex-direction: column;
+            height: 600px;
+            align-items:flex-start;
+            justify-content: initial;
+            
         }
 
     }

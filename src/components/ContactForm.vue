@@ -77,7 +77,7 @@
                     <div class="error" v-if="!$v.contactForm.message.maxLength">Správa može pozostávať z maximálne {{ $v.contactForm.message.$params.minLength.min }} písmen.</div>
                 </div>
             </div>
-            <a href="">Pozrite sa ako sa staráme o vaše osobné dáta</a>
+            <router-link to="gdpr" href="gdpr">Pozrite sa ako sa staráme o vaše osobné dáta</router-link>
             <vue-recaptcha
                 sitekey="6Lf32acZAAAAAD6CoLtbGemXRbJvoGEfg2qao0j7" 
                 ref="invisibleRecaptcha"

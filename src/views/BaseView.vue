@@ -5,17 +5,17 @@
             <router-view></router-view>
         </main>
 
-        <!-- <footer-cmp></footer-cmp> -->
+        <footer-cmp></footer-cmp>
     </div>
 </template>
 <script>
     import NavBar from '../components/NavBar';
 
-    //import FooterCmp from '../components/Footer';
+    import FooterCmp from '../components/Footer';
 
     export default {
         name: "base-view",
-        components: {NavBar},
+        components: {NavBar, FooterCmp},
         data(){
             return {
                 isLoggedIn : null,

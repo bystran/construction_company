@@ -2,7 +2,7 @@
     <div class=" position-ref full-height bg-ba" id='home'>
         <div class="content-main-page">
             <!-- <h2>Kompletné riešenia stavby.</h2> -->
-            <h1>Vaša stavba bez starostí.</h1>
+            <h1>Staviame pre Vás s dušou.</h1>
             <h3>Postavime Vašu vysnívanú stavbu a odbremeníme Vás od administratívy. Zároveň Vás vždy informujeme o aktuálnom dianí a pokročení vo výstavbe.</h3>
             <a href="#contact" v-smooth-scroll class="btn btn-primary">Napíšte nám</a> 
             <a href="#services" v-smooth-scroll class="btn btn-secondary">Zistite viacej</a> 
@@ -27,7 +27,6 @@
     background-position: left center;
     background-size: cover;
     position: relative;
-    z-index: -50;
 }
 #downIcon{
     position:absolute;

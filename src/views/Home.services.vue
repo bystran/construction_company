@@ -29,6 +29,7 @@
 <style lang='scss'>
  @import '../mixins';
     #planet-wm{
+        display:none;
         position:absolute;
         top:-80px;
         left:-150px;

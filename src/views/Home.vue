@@ -7,7 +7,6 @@
         <!-- <references></references>
         <reviews></reviews> -->
         <contact></contact>
-        <footer-cmp></footer-cmp>
     
     </div>
     
@@ -21,7 +20,6 @@ import Perks         from "./Home.perks"
 // import References    from "./Home.references"
 // import Reviews       from "./Home.reviews"
 import Contact       from "./Home.contact"
-import FooterCmp from '../components/Footer';
 export default {
     components:{
         Home, 
@@ -31,7 +29,6 @@ export default {
         // References, 
         // Reviews, 
         Contact,
-        FooterCmp
     },
     methods:{
         visibilityChanged (isVisible, entry, path) {

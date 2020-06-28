@@ -29,27 +29,15 @@
             
             
         }
-        .icon{
-            display: inline;
-            div{
-                display:inline;
-                svg{
-                    height: 34px;
-                    fill: white;
-                    padding-left: 10px
-                }
-            }
-        }
         h3{
             color:#001F60;
             font-weight: normal;
             line-height: .9em;
-
+            margin: 10px 0px;
             display: inline;
             font-size: 1.85em;
-            margin-top: 5px;
             padding-left:10px;
-            border-left:3px solid #44A1E7;
+            //border-left:3px solid #44A1E7;
         }
         p{
             color:#455678;

@@ -31,10 +31,7 @@ export default {
         Contact,
     },
     methods:{
-        visibilityChanged (isVisible, entry, path) {
-            console.log(entry)
-            this.$router.push({path:path})
-        }
+        
     }
         
 }

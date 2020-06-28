@@ -1,6 +1,6 @@
 <template>
     <div class='cf-wrp'>
-        <form @submit="handleSubmit" @keydown.enter="handleSubmit">
+        <form @submit="verify">
             <div 
             class="form-group" 
             :class="{ 'form-group--error': $v.contactForm.firstName.$error, 'active':active.firstName, 'hasValue':$v.contactForm.firstName.$model }"            
@@ -257,26 +257,27 @@ export default {
         delayTouch($v) {
             $v.$reset()
             if (touchMap.has($v)) {
+                
                 clearTimeout(touchMap.get($v))
             }
             touchMap.set($v, setTimeout($v.$touch, 1000))
         },
-
-        onVerify: function (response) {
-            this.contactForm["g-recaptcha-response"] = response
+        verify: function(e){
+            e.preventDefault();
+            this.$refs.invisibleRecaptcha.execute()
         },
         onExpired: function () {
             this.contactForm["g-recaptcha-response"] = ""
         },
-        handleSubmit: async function(e){
-            console.log("click");
+        handleSubmit: async function(){
             
-            e.preventDefault();
+            
+            
             this.$v.$touch()
             
             this.button.is_loading = true;
 
-            await this.$refs.invisibleRecaptcha.execute()
+            
 
             if(this.$v.$invalid || this.contactForm["g-recaptcha-response"] == ""){
                 this.button.is_loading = false;
@@ -327,10 +328,13 @@ export default {
 
                 }
                 
-                this.$refs.invisibleRecaptcha.reset() // Direct call reset method
             }
             this.button.is_loading = false;
             
+        },
+        onVerify: function (response) {
+            this.contactForm["g-recaptcha-response"] = response
+            this.handleSubmit();
         },
 
     }

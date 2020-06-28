@@ -14,21 +14,21 @@ export const sendForm = async (form, url=default_url, config = default_config) =
         message    : form.message,
         "g-recaptcha-response": form["g-recaptcha-response"]   
     }
-    console.log(data);
+    
 
     try {
         const response = await axios.post(url, data, config)
         return response.data
     } catch (error) {
-        console.log(error)
+        
         if(error.response){
 
             return error.json()
         }else if(error.request){
-            console.log(error.request)
+            
             return {network_error:"Nepodarilo sa skontaktovať server."}
         }else{
-            console.log(error.message)
+            
             return {network_error:"Nepodarilo sa skontaktovať server."}     
         }
     }

@@ -2,20 +2,20 @@
     <div>
         <nav class="navbar" v-bind:class="[ isUp ? 'invisible' : '', !isAtTop ? 'displaced': '']">
                 <div class="container">
-                    <a  href="#home" v-smooth-scroll class="navbar-brand" id='logo'>
+                    <router-link  to="/#home" v-smooth-scroll class="navbar-brand" id='logo'>
                         <Logo/>
-                    </a>
+                    </router-link>
                     <button class="navbar-toggler" type="button" v-on:click="toggleNav">
                         <tasty-burger-button type="spin" color="#fff" />
                     </button>
 
                     <div class="hidden-nav" v-bind:class="{ toggled : isToggled}">
                         <ul class=''>
-                            <li ><a href="#home" v-smooth-scroll>Domov</a></li>
-                            <li > <a href="#services" v-smooth-scroll>Služby</a></li>
-                            <li > <a href="#about" v-smooth-scroll>O nás</a></li>
-                            <li> <a href="#gallery" v-smooth-scroll>Referencie</a></li>
-                            <li > <a href="#contact" v-smooth-scroll class="btn btn-primary">Napíšte nám</a> </li>
+                            <li ><router-link to="/#home" v-smooth-scroll>Domov</router-link></li>
+                            <li > <router-link to="/#services" v-smooth-scroll>Služby</router-link></li>
+                            <li > <router-link to="/#about" v-smooth-scroll>O nás</router-link></li>
+                            <li> <router-link to="/#gallery" v-smooth-scroll>Referencie</router-link></li>
+                            <li > <router-link to="/#contact" v-smooth-scroll class="btn btn-primary">Napíšte nám</router-link> </li>
                         </ul>
 
                     </div>
